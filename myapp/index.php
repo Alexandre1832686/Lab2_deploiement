@@ -1,4 +1,11 @@
 <?php
+
+if(filesize("config/config.txt")>0)
+{
+
+
+
+
 require_once("dal/DAL.php");
 session_start();
 
@@ -78,4 +85,14 @@ ob_start();
 $region_content = ob_get_clean();
 
 require('includes/template.php');
+
+
+
+
+
+}
+else
+{
+	header("location:install/install.php");
+}
 ?>

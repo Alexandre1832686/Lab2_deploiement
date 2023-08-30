@@ -1,8 +1,5 @@
 <?php
-$myfile = fopen("../config/config.txt", "r") or die("Unable to open file!");
-$configtext = fread($myfile,filesize("../config/config.txt"));
-fclose($myfile);
-if(strlen($configtext)==0)
+if(filesize("../config/config.txt")==0)
 {
 ?>
 
@@ -33,6 +30,6 @@ if(strlen($configtext)==0)
 }
 else
 {
-    echo "l'installation a déjà été fait!";
+    header("location:../index.php");
 }
 ?>
