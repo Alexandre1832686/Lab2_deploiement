@@ -5,7 +5,6 @@ if(filesize("config/config.txt")>0)
 
 
 
-
 require_once("dal/DAL.php");
 session_start();
 

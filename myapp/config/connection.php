@@ -1,10 +1,7 @@
 <?php
 if(filesize("../config/config.txt")>0)
 {
-
-
     $myfile = fopen("config.txt", "r") or die("Unable to open file!");
-    
 ?>
 
 
@@ -16,14 +13,14 @@ if(filesize("../config/config.txt")>0)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Config</title>
 </head>
-<body style="">
-    <form method="post" action="../install/valid.php">
+<body>
+    <form method="post" action="config.php">
         <h1>Configurations</h1>
         <h4>identifiant:</h4><input type="text" name="id">
         <h4>mot de passe:</h4><input type="password" name="mdp">
         
         <input type="hidden" name="config" value="conf">
-</br></br>
+        </br></br>
         <input type="submit" text="connection">
     </form>
 </body>
